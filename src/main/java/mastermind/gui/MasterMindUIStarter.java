@@ -3,13 +3,20 @@ package mastermind.gui;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import mastermind.game.Pion;
+
+import java.io.InputStream;
 
 public class MasterMindUIStarter extends Application {
 
@@ -38,9 +45,13 @@ public class MasterMindUIStarter extends Application {
         root.setTop(menu);
         Scene scene = new Scene(root, 640, 480);
 
-        //Flow pane
-        FlowPane gamePane = new FlowPane();
-        
+
+
+        //VBox in center
+        VBox vBox = new VBox();
+        root.setCenter(vBox);
+
+        vBox.getChildren().add(Pion.pionRouge());
 
 
         primaryStage.setScene(scene);

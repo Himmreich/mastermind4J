@@ -7,7 +7,8 @@ public enum Couleur {
     VERT("V"),
     VIOLET("M"),
     BLANC("B"),
-    NOIR("N");
+    NOIR("N"),
+    EMPTY("E");
 
     private String initiale;
 
